@@ -1,0 +1,19 @@
+{
+  "name": "create-github-issue-from-slack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yoshimaru46/create-github-issue-from-slack.git"
+  },
+  "author": "yoshimaru46",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshimaru46/create-github-issue-from-slack/issues"
+  },
+  "homepage": "https://github.com/yoshimaru46/create-github-issue-from-slack#readme"
+}
