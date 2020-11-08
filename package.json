@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "local": "node_modules/.bin/nodemon app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,10 @@
   },
   "homepage": "https://github.com/yoshimaru46/create-github-issue-from-slack#readme",
   "dependencies": {
-    "@slack/bolt": "^2.4.1"
+    "@slack/bolt": "^2.4.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
   }
 }
