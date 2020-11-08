@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yoshimaru46/create-github-issue-from-slack/issues"
   },
-  "homepage": "https://github.com/yoshimaru46/create-github-issue-from-slack#readme"
+  "homepage": "https://github.com/yoshimaru46/create-github-issue-from-slack#readme",
+  "dependencies": {
+    "@slack/bolt": "^2.4.1"
+  }
 }
