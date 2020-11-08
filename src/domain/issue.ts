@@ -50,11 +50,15 @@ export const changeIssuesIntoBlock = (issues: any[], keyword: string) => {
     }
   })
   issues.forEach(issue => {
+    let type = 'issue'
+    if (!!issue.url.match('pull')) {
+      type = 'pull'
+    }
     blocks.push({
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `*<${ issue.url }|${ issue.title }> (${ issue.author.login } )* \n\n Repository: ${ issue.repository.name }`
+        text: `*<${ issue.url }|${ issue.title }> (${ issue.author.login })* \n\n Repository: ${ issue.repository.name } (${type})`
       }
     })
     blocks.push({
