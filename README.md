@@ -1,5 +1,9 @@
 # slack-app-for-github
 
+## Features
+
+- Search GitHub issues from Slash Command (like [Tettra](https://tettra.com/))
+
 ## How to develop
 
 - Create Slack app & get secrets
@@ -11,7 +15,7 @@
 
 - `yarn local`
 
-- `ngrok http 3000`
+- `ngrok http 3000`x
 
 - set ngrok url to slack app 
     - Interactivity & Shortcuts
