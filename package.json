@@ -1,28 +1,31 @@
 {
-  "name": "create-github-issue-from-slack",
+  "name": "slack-app-for-github",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "local": "node_modules/.bin/nodemon app.js",
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && node lib/index.js",
+    "local": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/yoshimaru46/create-github-issue-from-slack.git"
+    "url": "git+ssh://git@github.com/yoshimaru46/slack-app-for-github.git"
   },
   "author": "yoshimaru46",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yoshimaru46/create-github-issue-from-slack/issues"
+    "url": "https://github.com/yoshimaru46/slack-app-for-github/issues"
   },
-  "homepage": "https://github.com/yoshimaru46/create-github-issue-from-slack#readme",
+  "homepage": "https://github.com/yoshimaru46/slack-app-for-github#readme",
   "dependencies": {
-    "@slack/bolt": "^2.4.1",
-    "dotenv": "^8.2.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.1"
+    "@octokit/graphql": "^4.5.7",
+    "@slack/bolt": "^2.2.3",
+    "@types/node": "<13",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
   }
 }
