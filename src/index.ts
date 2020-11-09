@@ -1,6 +1,7 @@
 import { App } from '@slack/bolt';
 import * as dotenv from "dotenv"
-import { changeIssuesIntoBlock, getIssues } from "./domain/issue";
+import { getIssues } from "./domain/issue";
+import { changeIssuesIntoBlock } from "./presenter/issue";
 
 dotenv.config()
 

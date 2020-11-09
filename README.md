@@ -15,9 +15,9 @@
 
 - `yarn local`
 
-- `ngrok http 3000`x
+- `ngrok http 3000`
 
-- set ngrok url to slack app 
+- set ngrok url to slack app (https://hogehoge.ngrok.io/slack/events) 
     - Interactivity & Shortcuts
       - Request URL
     - Slash Commands
