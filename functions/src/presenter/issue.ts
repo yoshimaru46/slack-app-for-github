@@ -1,10 +1,13 @@
+import * as functions from "firebase-functions";
+const config = functions.config();
+
 export const changeIssuesIntoBlock = (issues: any[], keyword: string) => {
   const blocks = []
   blocks.push({
     type: 'section',
     text: {
       type: 'mrkdwn',
-      text: `Showing search results for "${ keyword }". *<https://github.com/issues?q=org%3A${ process.env.GITHUB_ORG }+${ keyword }|View all results>*`
+      text: `Showing search results for "${ keyword }". *<https://github.com/issues?q=org%3A${ config.github.org }+${ keyword }|View all results>*`
     }
   })
   issues.forEach(issue => {

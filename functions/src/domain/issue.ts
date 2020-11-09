@@ -1,5 +1,8 @@
 import { graphqlWithAuth } from "../util/octkit";
 
+import * as functions from "firebase-functions";
+const config = functions.config();
+
 export const getIssues = async (keyword: string) => {
   const { search } = await graphqlWithAuth(`
   query ($q: String!) {
@@ -31,9 +34,9 @@ export const getIssues = async (keyword: string) => {
     }
   }`,
     {
-      q: `org:${ process.env.GITHUB_ORG } ${ keyword }`,
+      q: `org:${ config.github.org } ${ keyword }`,
     }
   );
 
-  return search.edges.map(edge => edge.node).filter(node => !!node.title);
+  return search.edges.map((edge: any) => edge.node).filter((node: any) => !!node.title);
 }

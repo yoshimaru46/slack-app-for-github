@@ -10,19 +10,17 @@
 
 - Create Personal access tokens in github
   - Grants access to repo
-
-- `yarn install`
-
-- `yarn local`
-
-- `ngrok http 3000`
-
-- set ngrok url to slack app (https://hogehoge.ngrok.io/slack/events) 
-    - Interactivity & Shortcuts
-      - Request URL
-    - Slash Commands
-      - Request URL
-    - Event Subscriptions
-      - Request URL
+  
+- TODO
 
 - Call slash command `/find-issue hoge`
+
+## envs
+
+```
+firebase functions:config:set slack.signing_secret=hogehoge
+firebase functions:config:set slack.bot_token=xoxb-hogehoge
+
+firebase functions:config:set github.org=hogehoge
+firebase functions:config:set github.access_token=hogehoge
+```
