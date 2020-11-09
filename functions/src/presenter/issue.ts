@@ -7,8 +7,8 @@ export const changeIssuesIntoBlock = (issues: any[], keyword: string) => {
     type: 'section',
     text: {
       type: 'mrkdwn',
-      text: `Showing search results for "${ keyword }". *<https://github.com/issues?q=org%3A${ config.github.org }+${ keyword }|View all results>*`
-    }
+      text: `Showing search results for "${ keyword }". *<https://github.com/issues?q=org%3A${ config.github.org }+${ keyword }|View all results>*`,
+    },
   })
   issues.forEach(issue => {
     let type = 'issue'
@@ -19,11 +19,11 @@ export const changeIssuesIntoBlock = (issues: any[], keyword: string) => {
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `*<${ issue.url }|${ issue.title }> (${ issue.author.login })* \n\n Repository: ${ issue.repository.name } (${type})`
-      }
+        text: `*<${ issue.url }|${ issue.title }> (${ issue.author.login })* \n\n Repository: ${ issue.repository.name } (${type})`,
+      },
     })
     blocks.push({
-      "type": "divider"
+      "type": "divider",
     })
   })
   return blocks

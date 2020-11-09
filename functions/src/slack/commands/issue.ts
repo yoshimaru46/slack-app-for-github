@@ -5,7 +5,7 @@ import { changeIssuesIntoBlock } from "../../presenter/issue";
 export const findIssueCommand = (app: App) => {
   app.command("/find-issue", async ({ ack, body, context, command , respond}) => {
     await ack();
-    if (command.text == null) {
+    if (command.text === null) {
       // TODO エラーハンドリング
     }
 
@@ -15,7 +15,7 @@ export const findIssueCommand = (app: App) => {
     const blocks = changeIssuesIntoBlock(issues, command.text)
     await respond({
       response_type: 'ephemeral',
-      blocks
+      blocks,
     })
   });
 

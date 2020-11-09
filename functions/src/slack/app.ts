@@ -7,13 +7,13 @@ const config = functions.config();
 export const expressReceiver = new ExpressReceiver({
   signingSecret: config.slack.signing_secret,
   endpoints: "/events",
-  processBeforeResponse: true
+  processBeforeResponse: true,
 });
 
 const app = new App({
   receiver: expressReceiver,
   token: config.slack.bot_token,
-  processBeforeResponse: true
+  processBeforeResponse: true,
 });
 
 findIssueCommand(app);
